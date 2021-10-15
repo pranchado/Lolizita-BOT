@@ -1,18 +1,22 @@
 <p align="center">
-<img src="https://i.imgur.com/NBMZVYO_d.webp?maxwidth=640&shape=thumb&fidelity=medium" height="200"/>
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Music114/v4/46/4c/14/464c1490-1ae1-d93f-fa13-278d56806f6a/artwork.jpg/400x400cc.jpg" height="200"/>
 </p>
 <p align="center">
 <a href="#"><img title="Whatsapp-Bot" src="https://img.shields.io/badge/Whatsapp--Bot Para Termux-black?colorA=red&style=for-the-badge"></a>
 </p>
 <p align="center">
-<a href="https://github.com/italuH"><img title="Criador" src="https://img.shields.io/badge/Criador-Italu-cyan.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/tobizinho"><img title="Criador" src="https://img.shields.io/badge/Criador-Tobi-cyan.svg?style=for-the-badge&logo=github"></a>
 </p>
+<p align="center">
+<a href="https://github.com/italuH"><img title="REMAKE BY" src="https://img.shields.io/badge/REMAKE BY ITALUH-magenta?colorA=red&style=for-the-badge"></a>
+</p>
+
 
 
 ## Olá, eu sou o Italu <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="29px">
 
 
-<summary>Como instalar o  Tiringa-BOT<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/hmm.gif" width="29px"></summary>
+<summary>Como instalar a Lolizita-BOT<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/hmm.gif" width="29px"></summary>
 
 ### Requisitos<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/powerup.gif" width="29px">
 
@@ -20,7 +24,7 @@
 
 > Termux instalado
 > WhatsApp instalado
-> 2 Celulares     (você irá precisar escanear o código qr para iniciar o Tiringa-BOT)
+> 2 Celulares     (você irá precisar escanear o código qr para iniciar a Lolizita-BOT)
 
 ```
 
@@ -30,15 +34,15 @@
 
 > termux-setup-storage     
 > pkg install git     
-> git clone https://github.com/italuH/Tiringa-BOT    
-> cd Tiringa-BOT    
+> git clone https://github.com/italuH/Lolizita-BOT  
+> cd Lolizita-BOT    
 > bash install.sh     
 > npm start
 ```
 
 Em comando unico:
 ```bash
-> termux-setup-storage && pkg install git -y && git clone https://github.com/italuH/Tiringa-BOT && cd Tiringa-BOT && bash install.sh && npm start
+> termux-setup-storage && pkg install git -y && git clone https://github.com/italuH/Lolizita-BOT && cd Lolizita-BOT && bash install.sh && npm start
 
 ```
 ## Caso queira o bot na pasta downloads<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Earth.gif" width="29px">
@@ -49,14 +53,14 @@ Em comando unico:
 > cd storage
 > cd downloads
 > pkg install git     
-> git clone https://github.com/italuH/Tiringa-BOT    
-> cd Tiringa-BOT    
+> git clone https://github.com/italuH/Lolizita-BOT    
+> cd Lolizita-BOT    
 > bash install.sh     
 > npm start
 ```
 Em comando unico:
 ```bash
-> termux-setup-storage && cd storage && cd downloads && pkg install git -y && git clone https://github.com/italuH/Tiringa-BOT && cd Tiringa-BOT && bash install.sh && npm start
+> termux-setup-storage && cd storage && cd downloads && pkg install git -y && git clone https://github.com/italuH/Lolizita-BOT && cd Lolizita-BOT && bash install.sh && npm start
 
 ```
 
@@ -100,6 +104,7 @@ Para desativar o bot em PM2
 - [Fxc7](https://github.com/Fxc7)
 - [GDR](https://github.com/viniciusgdr)
 - [THOTH](https://github.com/thothdeus)
+- [Tobizinho](https://github.com/tobizinho)
 
 <p align="center">
 <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Mario_Gameplay.gif" alt="Mario Game" width="600" />
