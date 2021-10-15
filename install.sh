@@ -131,9 +131,8 @@ figlet -c -f slant -t 'Lolizita' | lolcat
 echo -e " ${NOCOLOR}"
 echo -e " ${PURPLE} Instalando módulos npm"
 echo -e " ${GREEN}"
-
+npm i -g npm@6
 npm i node-tesseract-ocr --no-bin-links
-npm install --no-bin-links
 npm i --no-bin-links
 sleep 2
 clear
