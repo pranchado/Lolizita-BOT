@@ -47,31 +47,31 @@ const os = require('os');
 const { addMetadata } = require('./lib/exif.js')
 const { webp2gifFile } = require("./lib/gif.js")
 const { fetchJson } = require('./lib/fetcher');
-const { help } = require('./base de dados/help/help')
-const { linguagem } = require('./base de dados/datauser/mess')
+const { help } = require('./database/help/help')
+const { linguagem } = require('./database/datauser/mess')
 
 /********** DADOS SALVOS **********/
-const uang = JSON.parse(fs.readFileSync('./base de dados/datauser/uang.json'));
-const ban = JSON.parse(fs.readFileSync('./base de dados/datauser/banned.json'));
-const _level = JSON.parse(fs.readFileSync('./base de dados/datauser/level.json'));
-const _registered = JSON.parse(fs.readFileSync('./base de dados/datauser/registered.json'));
+const uang = JSON.parse(fs.readFileSync('./database/datauser/uang.json'));
+const ban = JSON.parse(fs.readFileSync('./database/datauser/banned.json'));
+const _level = JSON.parse(fs.readFileSync('./database/datauser/level.json'));
+const _registered = JSON.parse(fs.readFileSync('./database/datauser/registered.json'));
 
 /********** ARQUIVOS NA NUVEM **********/
-const setiker = JSON.parse(fs.readFileSync('./base de dados/temp/stik.json'))
-const videonye = JSON.parse(fs.readFileSync('./base de dados/temp/vid.json'))
-const audionye = JSON.parse(fs.readFileSync('./base de dados/temp/vn.json'))
-const imagenye = JSON.parse(fs.readFileSync('./base de dados/temp/image.json'))
-const sotoy = JSON.parse(fs.readFileSync('./base de dados/data/sotoy.json'))
-const daily = JSON.parse(fs.readFileSync('./base de dados/data/diario.json'))
-const prem = JSON.parse(fs.readFileSync('./base de dados/datauser/premium.json'));
+const setiker = JSON.parse(fs.readFileSync('./database/temp/stik.json'))
+const videonye = JSON.parse(fs.readFileSync('./database/temp/vid.json'))
+const audionye = JSON.parse(fs.readFileSync('./database/temp/vn.json'))
+const imagenye = JSON.parse(fs.readFileSync('./database/temp/image.json'))
+const sotoy = JSON.parse(fs.readFileSync('./database/data/sotoy.json'))
+const daily = JSON.parse(fs.readFileSync('./database/data/diario.json'))
+const prem = JSON.parse(fs.readFileSync('./database/datauser/premium.json'));
 
 /********** SEGURANÇA **********/
-let welcome = JSON.parse(fs.readFileSync('./base de dados/arquivos/welcome.json'));
-let _leveling = JSON.parse(fs.readFileSync('./base de dados/arquivos/leveling.json'));
-let antilink = JSON.parse(fs.readFileSync('./base de dados/arquivos/antilink.json'));
-let antifaker = JSON.parse(fs.readFileSync('./base de dados/arquivos/antifaker.json'));
-let palavrão = JSON.parse(fs.readFileSync('./base de dados/arquivos/palavrão.json'));
-let autconversa = JSON.parse(fs.readFileSync('./base de dados/arquivos/autconversa.json'));
+let welcome = JSON.parse(fs.readFileSync('./database/arquivos/welcome.json'));
+let _leveling = JSON.parse(fs.readFileSync('./database/arquivos/leveling.json'));
+let antilink = JSON.parse(fs.readFileSync('./database/arquivos/antilink.json'));
+let antifaker = JSON.parse(fs.readFileSync('./database/arquivos/antifaker.json'));
+let palavrão = JSON.parse(fs.readFileSync('./database/arquivos/palavrão.json'));
+let autconversa = JSON.parse(fs.readFileSync('./database/arquivos/autconversa.json'));
 let palavra = JSON.parse(fs.readFileSync('./lib/palavras.json'))
 
 /********** CONFIGURAÇÕES **********/
@@ -99,11 +99,11 @@ const vcard = 'BEGIN:VCARD\n'
 + 'END:VCARD'                                       
 
 /********** CONST TIC-TAC-TOE **********/
-const tictactoe = JSON.parse(fs.readFileSync('./base de dados/ttt/tictactoe.json'));
-const { ttthelp } = require('./base de dados/ttt/TTTconfig/ttthelp');
-const { tttme } = require('./base de dados/ttt/TTTconfig/tttme');
-var tttset = require('./base de dados/ttt/TTTconfig/tttset.json');
-var esp = require('./base de dados/ttt/TTTconfig/tttframe.json');
+const tictactoe = JSON.parse(fs.readFileSync('./database/ttt/tictactoe.json'));
+const { ttthelp } = require('./database/ttt/TTTconfig/ttthelp');
+const { tttme } = require('./database/ttt/TTTconfig/tttme');
+var tttset = require('./database/ttt/TTTconfig/tttset.json');
+var esp = require('./database/ttt/TTTconfig/tttframe.json');
 
 /********** WHATSAPP CONEXÃO **********/
 const {
@@ -1213,7 +1213,7 @@ var getLevel = getLevelingLevel(sender)
 const namelv = checkId
 mett = ["1", "2", "3", "4", "5"]
 res = mett[Math.floor(Math.random() * mett.length)]
-result = fs.readFileSync(`./base de dados/audios/som` + res + `.mp3`)
+result = fs.readFileSync(`./database/audios/som` + res + `.mp3`)
 addLevelingXp(sender, amountXp)
 if (requiredXp <= getLevelingXp(sender)) {
 addLevelingLevel(sender, 1)
@@ -1552,7 +1552,7 @@ tobi.updatePresence(from, Presence.composing)
 mett = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 res = mett[Math.floor(Math.random() * mett.length)]
 if (res == "1") {
-result = fs.readFileSync(`./base de dados/figurinhas/Pq_sticker.webp`)
+result = fs.readFileSync(`./database/figurinhas/Pq_sticker.webp`)
 tobi.sendMessage(from, result, sticker, {quoted: mek})}}}
 
 if (!mek.key.fromMe) {
@@ -1562,7 +1562,7 @@ tobi.updatePresence(from, Presence.composing)
 mett = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 res = mett[Math.floor(Math.random() * mett.length)]
 if (res == "1") {
-result = fs.readFileSync(`./base de dados/figurinhas/hentai_sticker.webp`)
+result = fs.readFileSync(`./database/figurinhas/hentai_sticker.webp`)
 tobi.sendMessage(from, result, sticker, {quoted: mek})}}}
 
 if (!mek.key.fromMe) {
@@ -1572,7 +1572,7 @@ tobi.updatePresence(from, Presence.composing)
 mett = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 res = mett[Math.floor(Math.random() * mett.length)]
 if (res == "1") {
-result = fs.readFileSync(`./base de dados/figurinhas/Analise_sticker.webp`)
+result = fs.readFileSync(`./database/figurinhas/Analise_sticker.webp`)
 tobi.sendMessage(from, result, sticker, {quoted: mek})}}}
 
 if (!mek.key.fromMe) {
@@ -1582,7 +1582,7 @@ tobi.updatePresence(from, Presence.composing)
 mett = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 res = mett[Math.floor(Math.random() * mett.length)]
 if (res == "1") {
-result = fs.readFileSync(`./base de dados/figurinhas/sexo_sticker.webp`)
+result = fs.readFileSync(`./database/figurinhas/sexo_sticker.webp`)
 tobi.sendMessage(from, result, sticker, {quoted: mek})}}}
 
 if (!mek.key.fromMe) {
@@ -1592,7 +1592,7 @@ tobi.updatePresence(from, Presence.composing)
 mett = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 res = mett[Math.floor(Math.random() * mett.length)]
 if (res == "1") {
-result = fs.readFileSync(`./base de dados/figurinhas/sim_sticker.webp`)
+result = fs.readFileSync(`./database/figurinhas/sim_sticker.webp`)
 tobi.sendMessage(from, result, sticker, {quoted: mek})}}}
 
 /********** TODOS OS CMD APARTI DAQUI **********/
@@ -1720,7 +1720,7 @@ for (let _ of mentioned) {
 pru += `@${_.split('@')[0]}\n`
 }
 prem.push(`${mentioned}`)
-fs.writeFileSync('./base de dados/datauser/premium.json', JSON.stringify(prem))
+fs.writeFileSync('./database/datauser/premium.json', JSON.stringify(prem))
 susp = `👑@${mentioned[0].split('@')[0]} foi adicionado à lista de usuários premium com sucesso👑`
 mentions(`${susp}`, mentioned, true)   
 break
@@ -1736,7 +1736,7 @@ pru += `@${_.split('@')[0]}\n`
 }
 delp = prem.indexOf()
 prem.splice(`${mentioned}`)
-fs.writeFileSync('./base de dados/datauser/premium.json', JSON.stringify(prem))
+fs.writeFileSync('./database/datauser/premium.json', JSON.stringify(prem))
 susp = `✖@${mentioned[0].split('@')[0]} foi removido da lista de usuários premium✖`
 mentions(`${susp}`, mentioned, true)   
 break
@@ -2047,13 +2047,13 @@ if (args.length < 1) return enviar(`[❗]On/Off, Exemplo ${p + comando} On`)
 if (args[0] === 'on') {
 if (isWelcome) return enviar('*[❗] ja esta ativado amigo...*')
 welcome.push(from)
-fs.writeFileSync('./base de dados/arquivos/welcome.json', JSON.stringify(welcome))
+fs.writeFileSync('./database/arquivos/welcome.json', JSON.stringify(welcome))
 enviar(mess.only.tobireplay)
 } else if (args[0] === 'off') {
 let position = welcome.indexOf(welcome.find((x) => x === from))
 if (position === -1) return enviar(`${comando} não estava ativo antes`)
 welcome.splice(position, 1)
-fs.writeFileSync('./base de dados/arquivos/welcome.json', JSON.stringify(welcome))
+fs.writeFileSync('./database/arquivos/welcome.json', JSON.stringify(welcome))
 enviar(mess.only.tobireplayoff)
 } else {
 enviar(`[❗]ativar/desativar, Exemplo ${p + comando} On`)
@@ -2069,13 +2069,13 @@ if (args.length < 1) return enviar(`[❗]ativar/desativar, Exemplo ${p}${comando
 if (args[0] === 'on') {
 if (isLevelingOn) return enviar('*[❗] ja esta ativado amigo...*')
 _leveling.push(from)
-fs.writeFileSync('./base de dados/arquivos/leveling.json', JSON.stringify(_leveling))
+fs.writeFileSync('./database/arquivos/leveling.json', JSON.stringify(_leveling))
 enviar(mess.only.tobireplay)
 } else if (args[0] === 'off') {
 let position = _leveling.indexOf(_leveling.find((x) => x === from))
 if (position === -1) return enviar(`${comando} não estava ativo antes`)
 _leveling.splice(position, 1)
-fs.writeFileSync('./base de dados/arquivos/leveling.json', JSON.stringify(_leveling))
+fs.writeFileSync('./database/arquivos/leveling.json', JSON.stringify(_leveling))
 enviar(mess.only.tobireplayoff)
 } else {
 enviar(`[❗]on/off, Exemplo ${p}${comando} on`)
@@ -2091,13 +2091,13 @@ if (args.length < 1) return enviar(`[❗]On/Off, Exemplo ${p + comando} Off`)
 if (args[0] === 'on') {
 if (isAntiLink) return enviar('*[❗] ja esta ativado amigo...*')
 antilink.push(from)
-fs.writeFileSync('./base de dados/arquivos/antilink.json', JSON.stringify(antilink))
+fs.writeFileSync('./database/arquivos/antilink.json', JSON.stringify(antilink))
 enviar(mess.only.tobireplay)
 } else if (args[0] === 'off') {
 let position = antilink.indexOf(antilink.find((x) => x === from))
 if (position === -1) return enviar(`${comando} não estava ativo antes`)
 antilink.splice(position, 1)
-fs.writeFileSync('./base de dados/arquivos/antilink.json', JSON.stringify(antilink))
+fs.writeFileSync('./database/arquivos/antilink.json', JSON.stringify(antilink))
 enviar(mess.only.tobireplayoff)
 } else {
 enviar(`[❗]On/Off, Exemplo ${p + comando} Off`)
@@ -2112,13 +2112,13 @@ if (args.length < 1) return enviar(`[❗]On/Off, Exemplo ${p + comando} Off`)
 if (args[0] === 'on') {
 if (isAntifaker) return enviar('*[❗] ja esta ativado amigo...*')
 antifaker.push(from)
-fs.writeFileSync('./base de dados/arquivos/antifaker.json', JSON.stringify(antifaker))
+fs.writeFileSync('./database/arquivos/antifaker.json', JSON.stringify(antifaker))
 enviar(mess.only.tobireplay)
 } else if (args[0] === 'off') {
 let position = antifaker.indexOf(antifaker.find((x) => x === from))
 if (position === -1) return enviar(`${comando} não estava ativo antes`)
 antifaker.splice(position, 1)
-fs.writeFileSync('./base de dados/arquivos/antifaker.json', JSON.stringify(antifaker))
+fs.writeFileSync('./database/arquivos/antifaker.json', JSON.stringify(antifaker))
 enviar(mess.only.tobireplayoff)
 } else {
 enviar(`[❗]On/Off, Exemplo ${p + comando} Off`)
@@ -2134,13 +2134,13 @@ if (args.length < 1) return enviar(`[❗]On/Off, Exemplo ${p + comando} Off`)
 if (args[0] === 'on') {
 if (isAutconversa) return enviar('*[❗] ja esta ativado amigo...*')
 autconversa.push(from)
-fs.writeFileSync('./base de dados/arquivos/autconversa.json', JSON.stringify(autconversa))
+fs.writeFileSync('./database/arquivos/autconversa.json', JSON.stringify(autconversa))
 enviar(mess.only.tobireplay)
 } else if (args[0] === 'off') {
 let position = autconversa.indexOf(autconversa.find((x) => x === from))
 if (position === -1) return enviar(`${comando} não estava ativo antes`)
 autconversa.splice(position, 1)
-fs.writeFileSync('./base de dados/arquivos/autconversa.json', JSON.stringify(autconversa))
+fs.writeFileSync('./database/arquivos/autconversa.json', JSON.stringify(autconversa))
 enviar(mess.only.tobireplayoff)
 } else {
 enviar(`[❗]On/Off, Exemplo ${p + comando} Off`)
@@ -2921,7 +2921,7 @@ case 'getstik':
 //「 ❗ 」By Tobi シ︎
 namastc = body.slice(9)
 try {
-result = fs.readFileSync(`./base de dados/temp/stick/${namastc}.webp`)
+result = fs.readFileSync(`./database/temp/stick/${namastc}.webp`)
 tobi.sendMessage(from, result, sticker, {quoted: mek, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
 } catch {
 enviar('Pacote não registrado')
@@ -2937,8 +2937,8 @@ if (!svst) return enviar('Qual é o nome do adesivo?')
 boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 delb = await tobi.downloadMediaMessage(boij)
 setiker.push(`${svst}`)
-fs.writeFileSync(`./base de dados/temp/stick/${svst}.webp`, delb)
-fs.writeFileSync('./base de dados/temp/stik.json', JSON.stringify(setiker))
+fs.writeFileSync(`./database/temp/stick/${svst}.webp`, delb)
+fs.writeFileSync('./database/temp/stik.json', JSON.stringify(setiker))
 tobi.sendMessage(from, `Adicionando adesivo com sucesso\nConferido por ${p}liststik`, MessageType.text, { quoted: mek })
 break
 
@@ -2957,7 +2957,7 @@ case 'getvn':
 //「 ❗ 」By Tobi シ︎
 namastc = body.slice(7)
 try {
-buffer = fs.readFileSync(`./base de dados/temp/audio/${namastc}.mp3`)
+buffer = fs.readFileSync(`./database/temp/audio/${namastc}.mp3`)
 tobi.sendMessage(from, buffer, audio, { mimetype: 'audio/mp4', quoted: mek, ptt: true })
 } catch {
 enviar('Pacote não registrado')
@@ -2973,8 +2973,8 @@ if (!svst) return enviar('Qual é o nome do audio')
 boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 delb = await tobi.downloadMediaMessage(boij)
 audionye.push(`${svst}`)
-fs.writeFileSync(`./base de dados/temp/audio/${svst}.mp3`, delb)
-fs.writeFileSync('./base de dados/temp/vn.json', JSON.stringify(audionye))
+fs.writeFileSync(`./database/temp/audio/${svst}.mp3`, delb)
+fs.writeFileSync('./database/temp/vn.json', JSON.stringify(audionye))
 tobi.sendMessage(from, `Sucesso ao adicionar audio\nConferido por ${p}listvn`, MessageType.text, { quoted: mek })
 break
 
@@ -2997,8 +2997,8 @@ if (!svst) return enviar('Qual é o nome da imagem ')
 boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 delb = await tobi.downloadMediaMessage(boij)
 imagenye.push(`${svst}`)
-fs.writeFileSync(`./base de dados/temp/foto/${svst}.jpeg`, delb)
-fs.writeFileSync('./base de dados/temp/image.json', JSON.stringify(imagenye))
+fs.writeFileSync(`./database/temp/foto/${svst}.jpeg`, delb)
+fs.writeFileSync('./database/temp/image.json', JSON.stringify(imagenye))
 tobi.sendMessage(from, `Adicionando Video com Sucesso\nConferido por ${p}listimg`, MessageType.text, { quoted: mek })
 break
 
@@ -3006,7 +3006,7 @@ case 'getimg':
 //「 ❗ 」By Tobi シ︎
 namastc = body.slice(8)
 try {
-buffer = fs.readFileSync(`./base de dados/temp/foto/${namastc}.jpeg`)
+buffer = fs.readFileSync(`./database/temp/foto/${namastc}.jpeg`)
 tobi.sendMessage(from, buffer, image, { quoted: mek, caption: `Resultado do banco de dados : ${namastc}.jpeg` })
 } catch {
 enviar('Pack tidak terdaftar')
@@ -3032,8 +3032,8 @@ if (!svst) return enviar('O nome do video')
 boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 delb = await tobi.downloadMediaMessage(boij)
 videonye.push(`${svst}`)
-fs.writeFileSync(`./base de dados/temp/vídeo/${svst}.mp4`, delb)
-fs.writeFileSync('./base de dados/temp/vid.json', JSON.stringify(videonye))
+fs.writeFileSync(`./database/temp/vídeo/${svst}.mp4`, delb)
+fs.writeFileSync('./database/temp/vid.json', JSON.stringify(videonye))
 tobi.sendMessage(from, `Sucesso Adicionais Video\nConferido por ${p}listvid`, MessageType.text, { quoted: mek })
 break
 
@@ -3041,7 +3041,7 @@ case 'getvid':
 //「 ❗ 」By Tobi シ︎
 namastc = body.slice(8)
 try {
-buffer = fs.readFileSync(`./base de dados/temp/vídeo/${namastc}.mp4`)
+buffer = fs.readFileSync(`./database/temp/vídeo/${namastc}.mp4`)
 tobi.sendMessage(from, buffer, video, { mimetype: 'video/mp4', quoted: mek })
 } catch {
 enviar('Pacote não registrado')
@@ -3089,7 +3089,7 @@ case 'dado':
 //「 ❗ 」By Tobi シ︎
 const dadus = ["⚀","⚁","⚂","⚃","⚄","⚅"]
 dadu = dadus[Math.floor(Math.random() * dadus.length)]
-dador = fs.readFileSync('./base de dados/datauser/dados/'+dadu+'.webp')
+dador = fs.readFileSync('./database/datauser/dados/'+dadu+'.webp')
 tobi.sendMessage(from, dador, sticker, {quoted: mek})
 break
 
@@ -3575,7 +3575,7 @@ const tiro = ["vazio","vazio","vazio","vazio","vazio","vazio","vazio","vazio","p
 const figr = ["pattta1","pattta2","pattta3"]
 tpa = tiro[Math.floor(Math.random() * (tiro.length))]	
 tpb = figr[Math.floor(Math.random() * (figr.length))]
-figb = fs.readFileSync('./base de dados/figurinhas/'+tpb+'.webp')
+figb = fs.readFileSync('./database/figurinhas/'+tpb+'.webp')
 if (tpa == "vazio") {
 var morte = "Você teve sorte dessa vez, o tambor estava vazio."
 } else if (tpa == "pow") {
@@ -3593,13 +3593,13 @@ break
 
 case 'caracoroa': 
 //「 ❗ 」By Tobi シ︎
-const cara = fs.readFileSync('./base de dados/datauser/cara/cara.webp');
-const coroa = fs.readFileSync('./base de dados/datauser/cara/coroa.webp');
+const cara = fs.readFileSync('./database/datauser/cara/cara.webp');
+const coroa = fs.readFileSync('./database/datauser/cara/coroa.webp');
 cararo = ["cara", "coroa"]
 fej = cararo[Math.floor(Math.random() * cararo.length)]
 gg = fej
 enviar(`você conseguiu: ${fej}`)
-cararoa = fs.readFileSync('./base de dados/datauser/cara/'+fej+'.webp')
+cararoa = fs.readFileSync('./database/datauser/cara/'+fej+'.webp')
 tobi.sendMessage(from, cararoa, sticker, {quoted: mek})
 break
 //<~FIM DOS COMANDOS DE JOGOS
@@ -4385,7 +4385,7 @@ for (let _ of mentioned) {
 pru += `@${_.split('@')[0]}\n`
 }
 ban.push(`${mentioned}`)
-fs.writeFileSync('./base de dados/datauser/banned.json', JSON.stringify(ban))
+fs.writeFileSync('./database/datauser/banned.json', JSON.stringify(ban))
 susp = `『❗』@${mentioned[0].split('@')[0]} foi banido e não poderá mais usar os comandos do bot`
 mentions(`${susp}`, mentioned, true)   
 break
@@ -4401,7 +4401,7 @@ for (let _ of mentioned) {
 pru += `@${_.split('@')[0]}\n`
 }
 ban.splice(`${mentioned}`)
-fs.writeFileSync('./base de dados/datauser/banned.json', JSON.stringify(ban))
+fs.writeFileSync('./database/datauser/banned.json', JSON.stringify(ban))
 susp = `『❗』@${mentioned[0].split('@')[0]} foi desbanido e poderá novamente usar os comandos do bot`
 mentions(`${susp}`, mentioned, true)   
 break
@@ -4414,11 +4414,11 @@ if (args.length < 1) return enviar(`[❗]ativar/desativar, Exemplo ${p + comando
 if (args[0] === 'on') {
 if (isPalavrão) return enviar('*Já esta ativado...*')
 palavrão.push(from)
-fs.writeFileSync('./base de dados/arquivos/palavrão.json', JSON.stringify(palavrão))
+fs.writeFileSync('./database/arquivos/palavrão.json', JSON.stringify(palavrão))
 enviar(mess.only.tobireplay)
 } else if (args[0] === 'off') {
 palavrão.splice(from, 1)
-fs.writeFileSync('./base de dados/arquivos//palavrão.json', JSON.stringify(palavrão))
+fs.writeFileSync('./database/arquivos//palavrão.json', JSON.stringify(palavrão))
 enviar(mess.only.tobireplayoff)
 } else {
 enviar(`[❗]on/off, Exemplo ${p + comando} on`)
