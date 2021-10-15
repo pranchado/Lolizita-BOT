@@ -78,8 +78,7 @@ let palavra = JSON.parse(fs.readFileSync('./lib/palavras.json'))
 const infos = JSON.parse(fs.readFileSync('./configure aqui.js'))
 var {p, emoji_bot, SeuNome, OwnerNumber, NomeDoBot} = infos
 
-const arroz = JSON.parse(fs.readFileSync('./node_modules/@adiwajshing/baileys/quejo.js'))
-var { macarrão } = arroz
+var macarrão = "SuaApiKey"
 
 /********** BLOQ && VERIFICADO **********/
 const blocked = []; 
