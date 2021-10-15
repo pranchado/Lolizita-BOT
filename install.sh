@@ -27,7 +27,7 @@ if [ -e "$HOME/../usr/bin/ruby" ]; then
 		echo -e " ${RED}ruby não detectado, instalando..."
     apt install ruby -y
 	fi
-fi 
+
   
 	if [ -e "$HOME/../usr/bin/lolcat" ]; then
 		echo -e " ${GREEN}lolcat detectado prosseguindo..."
@@ -36,7 +36,6 @@ fi
 		echo -e " ${RED}lolcat não detectado, instalando..."
 		gem install lolcat
 	fi
-fi 
 sleep 2
 clear
 
