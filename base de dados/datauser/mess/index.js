@@ -1,1 +1,0 @@
-exports.linguagem = require('./linguagem')
